@@ -1,0 +1,11 @@
+### Direct GET request to Provider
+GET http://localhost:8081/products/101
+Accept: application/json
+
+### GET request through Consumer (Consumer calls Provider internally)
+GET http://localhost:8082/orders/product/101
+Accept: application/json
+
+### Product not found (expected HTTP 404)
+GET http://localhost:8081/products/999
+Accept: application/json
